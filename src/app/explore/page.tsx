@@ -1,0 +1,6 @@
+import { Search } from "@/components/icons";
+import { FilterBar } from "@/components/filter-bar";
+import { StoryCard } from "@/components/story-card";
+import { getStories } from "@/lib/data";
+export const metadata={title:"Explore"};
+export default async function Explore(){const stories=await getStories();return <div><div className="max-w-2xl"><p className="eyebrow">Discover</p><h1 className="mt-2 font-serif text-4xl font-bold">Explore the news</h1><p className="mt-3 text-muted">Search story clusters, then narrow results by subject, place, language and time.</p></div><div className="relative mt-7"><Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted" size={19}/><input aria-label="Search stories" placeholder="Search topics, companies, people or places" className="focus-ring h-12 w-full rounded-xl border bg-white pl-12 pr-4 text-sm shadow-card"/></div><div className="mt-4"><FilterBar/></div><div className="mt-8 flex items-center justify-between"><h2 className="font-serif text-2xl font-bold">Latest story clusters</h2><span className="text-sm text-muted">{stories.length} results</span></div><div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{stories.map((story,i)=><StoryCard key={story.id} story={story} featured={i===0}/>)}</div></div>}

@@ -1,0 +1,1 @@
+export function DemoNotice(){return <div className="border-b border-[#e9dfba] bg-[#fff9e8] px-4 py-2 text-center text-xs font-medium text-[#725415]">Demo workspace · All stories, publications, people, documents and citations are fictional sample data.</div>}
