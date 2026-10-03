@@ -1,0 +1,1 @@
+export default function Loading(){return <div aria-live="polite" aria-label="Loading content" className="animate-pulse"><div className="h-4 w-32 rounded bg-line"/><div className="mt-4 h-12 max-w-xl rounded bg-line"/><div className="mt-10 grid gap-5 md:grid-cols-3">{[1,2,3].map(i=><div key={i} className="h-80 rounded-2xl bg-line"/>)}</div></div>}

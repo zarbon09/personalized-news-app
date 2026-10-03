@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { border-color: theme("colors.line"); }
+html { background: #f7f8f5; }
+body { color: #17201d; background: #f7f8f5; font-feature-settings: "ss01"; }
+::selection { background: #c8ded2; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.balance { text-wrap: balance; }
+.eyebrow { @apply text-[11px] font-bold uppercase tracking-[.14em] text-muted; }
+.card { @apply rounded-2xl border bg-white shadow-card; }
+.focus-ring { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2; }
